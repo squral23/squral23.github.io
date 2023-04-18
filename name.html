@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choose Your Own Adventure</title>
+<link href="style.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+
+<form>
+
+<center><h2>Welcome to</h1></center>
+<center><h1>Choose Your Own Adventure</h2></center>
+
+<center>What is your name?</center><br/>
+
+<center><img src="name.jpg"/ alt="Name"></center>
+
+<center><input type="text" id="name"></center>
+
+<br/>
+<center><button type="button" onclick="captureName()">Submit</button></center>
+<br/>
+
+
+</form>
+
+<footer>
+  <span id="namePlace"></span>
+</footer>
+
+<script TYPE="text/javascript">
+
+function captureName() {
+  var name = document.getElementById("name").value
+  console.log(name);
+  var paragraphStart = "Welcome,  ";
+  var paragraphEnd = "! Click Next to proceed."
+  var message = paragraphStart + name + paragraphEnd;
+  document.getElementById('namePlace').innerHTML = message;
+
+
+  return false;
+}
+
+
+</script>
+
+<center><a href="index.html"m>Next</a></center>
+
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Choose Your Own Adventure</title>
+	<link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<center><h1>Welcome to Choose Your Own Adventure</h1></center>
+<center><p><a>What is your name?</a></p></center>
+<center><img src="name.jpg"/ alt="Name"></center>
+<form>
+<center><input type="text" id="name"></center>
+<center><input type="submit" value="submit"></center>
+</form>
+<script TYPE="text/javascript">
+function inputName(){
+	var name = document.getElementById('name').value;
+
+console.log(name);
+	return false;
+}
+</script>
+<center><p>Welcome</p></center>
+<center><a href="index.html"m>Next</a></center>
+</body>
+</html>
+-->
+
+<!--
+function showMsg(){
+  var userInput = document.getElementById('userInput').value;
+  document.getElementById('userMsg').innerHTML = userInput;
+}
+-->
